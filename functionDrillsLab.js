@@ -116,7 +116,7 @@ const exclaim = function(str) {
 
 // console.log('arrow')
 // console.log('declaration')
-// console.log('expression')
+console.log('expression')
 
 
 
@@ -131,7 +131,7 @@ const exclaimTwo = str => {
   return str.toUpperCase() + '!!!'
 }
 
-// console.log('arrow')
+ console.log('arrow')
 // console.log('declaration')
 // console.log('expression')
 
@@ -156,7 +156,7 @@ function exclaimFour(str) {
 }
 
 // console.log('arrow')
-// console.log('declaration')
+console.log('declaration')
 // console.log('expression')
 
 
@@ -171,6 +171,15 @@ function exclaimFour(str) {
 
 //CODE HERE
 
+const nameCheck = (name) => {
+  if(name === 'Steven') {
+    return "What is up Steven?"
+  } else if(name === 'Bryan') {
+    return "Hey Bryan!"
+  } else {return `Cool name, ${name}`}
+}
+let nameGreeting = nameCheck('Leroy');
+console.log(nameGreeting);
 
 ////////////////// PROBLEM 11 ////////////////////
 /*
@@ -184,6 +193,20 @@ function exclaimFour(str) {
 
 //CODE HERE
 
+const faveColorFinder = (color) => {
+  if(color === 'red') {
+    return 'red is a great color'
+  } else if(color === 'green') {
+    return 'green is a solid favorite color'
+  } else if(color === 'black') {
+    return 'so trendy'
+  } else {
+    return 'you need to evaluate your favorite color choice'
+  }
+}
+let colorRating = faveColorFinder('purple');
+console.log(colorRating);
+
 
 ////////////////// PROBLEM 12 ////////////////////
 let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
@@ -195,6 +218,12 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 
 //CODE HERE
 
+const printAllNames = (arr) => {
+  for(let i = 0; i <= arr.length; i++) {
+    console.log(arr[i]);
+  }
+}
+printAllNames(namesArr);
 
 ////////////////// PROBLEM 13 ////////////////////
 /*
