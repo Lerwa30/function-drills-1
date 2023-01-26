@@ -11,6 +11,10 @@
   Call the function.
 */
 
+function helloWorld() {
+  console.log('Hello, World!');
+}
+helloWorld();
 //CODE HERE
 
 
@@ -19,6 +23,8 @@
 /*
     Write an arrow function called 'jsNinja' that returns the string: 'I am a JavaScript ninja!'
 */
+
+const jsNinja = () => 'I am a JavaScript ninja!'
 
 //CODE HERE
 
