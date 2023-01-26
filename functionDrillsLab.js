@@ -80,6 +80,12 @@ greeting('Leroy');
 
 //CODE HERE
 
+const compareNums = (num1, num2) => {
+  if(num1 < num2) {
+    return num2
+  } else {return num1}
+}
+compareNums(1, 4);
 
 ////////////////// PROBLEM 6 ////////////////////
 /*
@@ -91,6 +97,11 @@ greeting('Leroy');
 
 //CODE HERE
 
+const add = (add1, add2) => {
+  return Number(add1) + Number(add2)
+}
+let sum = add('1', 4);
+console.log(sum);
 
 ////////////////// PROBLEM 7 ////////////////////
 
