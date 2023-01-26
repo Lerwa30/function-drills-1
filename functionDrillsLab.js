@@ -11,11 +11,13 @@
   Call the function.
 */
 
+//CODE HERE
+
 function helloWorld() {
   console.log('Hello, World!');
 }
 helloWorld();
-//CODE HERE
+
 
 
 ////////////////// PROBLEM 2 ////////////////////
@@ -24,9 +26,11 @@ helloWorld();
     Write an arrow function called 'jsNinja' that returns the string: 'I am a JavaScript ninja!'
 */
 
+//CODE HERE
+
 const jsNinja = () => 'I am a JavaScript ninja!'
 
-//CODE HERE
+
 
 
 ////////////////// PROBLEM 3 ////////////////////
@@ -37,6 +41,12 @@ const jsNinja = () => 'I am a JavaScript ninja!'
 */
 
 //CODE HERE
+
+function printName(name) {
+  console.log(name);
+}
+printName('Leroy');
+
 
 
 ////////////////// PROBLEM 4 ////////////////////
@@ -50,6 +60,11 @@ const jsNinja = () => 'I am a JavaScript ninja!'
 */
 
 //CODE HERE
+function greeting(name) {
+  console.log(`Hello, ${name}`)
+}
+greeting('Leroy');
+
 
 
 ////////////////// PROBLEM 5 ////////////////////
