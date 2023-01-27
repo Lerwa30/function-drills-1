@@ -293,6 +293,7 @@ const bigOrSmall = (arr) => {
 let arrayEvaluator = bigOrSmall(bigOrSmallArray);
 console.log(arrayEvaluator);
 
+
 ////////////////// PROBLEM 16 ////////////////////
 let contestants = ['Katniss', 'Peeta', 'Fox-face', 'Glimmer', 'Cato', 'Rue', 'Thresh', 'Clove', 'Marvel']
 let loser = 'Glimmer'
@@ -303,6 +304,17 @@ let loser = 'Glimmer'
 
 //CODE HERE
 
+const theEliminator = (contestants, loser) => {
+  for(let i = 0; i < contestants.length; i++) {
+    if(contestants[i] === loser) {
+      contestants.splice(i, 1);
+    }
+  }
+  return contestants;
+}
+let remainingContestants = theEliminator(contestants, loser);
+console.log(remainingContestants);
+
 
 ////////////////// PROBLEM 17 ////////////////////
 let sampleString = "Hi, my name is Kylo."
@@ -312,6 +324,11 @@ let sampleString = "Hi, my name is Kylo."
 */
 
 //CODE HERE
+
+const caps = (string) => {
+  console.log(string.toUpperCase());
+}
+caps(sampleString);
 
 
 ////////////////// PROBLEM 18 ////////////////////
@@ -325,6 +342,16 @@ let sampleString = "Hi, my name is Kylo."
   return 'must provide a valid email address'
 */
 
+const emailCheck = (email) => {
+  email = String(email).trim();
+    if(email.includes('@')) {
+      return 'email verified'
+    } else {
+      return 'must provide a valid email address'
+    }
+}
+
+
 ////////////////// PROBLEM 19 ////////////////////
 /*
   Write a function, naming it whatever you believe to be appropriate, that buys as many chocolate frogs as possible with a certain amount of gold. Each chocolate frog costs 3 gold. Your function should take in a single parameter, which is the amount of gold you are willing to spend. Your function should return a total amount of chocolate frogs you were able to purchase.
@@ -332,6 +359,12 @@ let sampleString = "Hi, my name is Kylo."
 */
 
 //CODE HERE
+
+const buyFrogs = (gold) => {
+  return gold / 3;
+}
+let totalFrogs = buyFrogs(30);
+console.log(totalFrogs)
 
 
 ////////////////// PROBLEM 20 ////////////////////
@@ -341,14 +374,40 @@ let sampleString = "Hi, my name is Kylo."
 
 //CODE HERE
 
+const buyFrogs2 = (gold) => {
+  if(gold % 3 === 0) {
+    return gold / 3
+  } else if((gold - 1) % 3 === 0) {
+    return (gold - 1) / 3
+  } else {
+    return (gold - 2) / 3
+  }
+}
+  
+
+let totalFrogs2 = buyFrogs2(25);
+console.log(totalFrogs2)
+
 
 ////////////////// PROBLEM 21 ////////////////////
-let sampleArray = [0,1,2,3,4,7,5,6,8,9]
+let sampleArray = [0,1,2,3,4,5,6,7,8,9]
 /*
   Write a function that takes in an array of numbers as an argument. In the body of the function, write logic to determine if the array is in ascending order. The function should return true, if it is sorted in ascending order, false if it is not. Create a variable, `arrayIsAscending` and set it equal to your function invoked. Use the sample array to test this function.
 */
 
 //CODE HERE
+
+const checkOrder = (arr) => {
+  for(let i = 0; i <= arr.length; i++) {
+    if(arr[i] < arr[i - 1]) {
+      return false
+    } 
+  }
+  return true
+}
+
+let arrayIsAscending = checkOrder(sampleArray);
+console.log(arrayIsAscending)
 
 
 ////////////////// PROBLEM 22 ////////////////////
@@ -373,13 +432,13 @@ function pond() {
 */
 
 //This array should contain the variable names (as strings) accessible in the global scope.
-let globalScope = []
+let globalScope = ['duck']
 
 //This array should contain the variable names (as strings) accessible in the bathroom function.
-let bathroomScope = []
+let bathroomScope = ['duck', 'rubber duck']
 
 //This array should contain the variable names (as strings) accessible in the bathtub function.
-let bathtubScope = []
+let bathtubScope = ['duck', 'sailor duck', 'rubber duck']
 
 //This array should contain the variable names (as strings) accessible in the pond function.
-let pondScope = []
+let pondScope = ['duck', 'real duck']
